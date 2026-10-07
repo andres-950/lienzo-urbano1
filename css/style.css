@@ -1,0 +1,671 @@
+/* ==========================================
+   RESET Y VARIABLES DE COLOR
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFFFF;
+    /* Fondo Blanco */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Tipografía para texto general */
+    color: #2D3748;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    /* Tipografía para títulos */
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================
+   HEADER Y NAVEGACIÓN (FLEXBOX)
+   ========================================== */
+.header {
+    background-color: #0A2540;
+    /* Tono Azul Oscuro Principal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo-accent {
+    color: #FF6B00;
+    /* Naranja Secundario */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #E2E8F0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FF6B00;
+}
+
+.btn-nav {
+    background-color: #00C853;
+    /* Verde Complementario */
+    color: #FFFFFF;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: #009624;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   SECCIÓN HERO (FLEXBOX)
+   ========================================== */
+.hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 37, 64, 0.85) 0%, rgba(0, 119, 182, 0.7) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #E2E8F0;
+    max-width: 650px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #FF6B00;
+    /* Naranja Secundario */
+    color: #FFFFFF;
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #E05D00;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #FFFFFF;
+    color: #0A2540;
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   SOBRE NOSOTROS (FLEXBOX)
+   ========================================== */
+.about {
+    padding: 5rem 5%;
+    background-color: #F8FAFC;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    color: #0A2540;
+    margin-bottom: 1.2rem;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    color: #4A5568;
+    margin-bottom: 1.5rem;
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.feature-icon {
+    color: #00C853;
+    /* Verde Complementario */
+    font-weight: bold;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+/* ==========================================
+   SECCIÓN DE PRODUCTOS (FLEXBOX)
+   ========================================== */
+.services {
+    padding: 5rem 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+    font-size: 2.3rem;
+    color: #0A2540;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    width: 360px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E2E8F0;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(10, 37, 64, 0.15);
+}
+
+.card-image {
+    position: relative;
+    height: 240px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #00C853;
+    /* Verde Complementario */
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.card-body {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    color: #0A2540;
+    margin-bottom: 0.8rem;
+}
+
+.card-body p {
+    color: #4A5568;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    background-color: #0A2540;
+    /* Azul Corporativo Principal */
+    color: #FFFFFF;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #FF6B00;
+    /* Pasa a Naranja en Hover */
+}
+
+/* ==========================================
+   SECCIÓN CONTACTO (FLEXBOX)
+   ========================================== */
+.contact {
+    background: linear-gradient(135deg, #0A2540 0%, #004B87 100%);
+    color: #FFFFFF;
+    padding: 5rem 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.contact-box p {
+    color: #CBD5E0;
+    margin-bottom: 3rem;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-item {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-item .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-item h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-item p,
+.contact-item a {
+    color: #E2E8F0;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #FF6B00;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+    background-color: #061727;
+    color: #A0AEC0;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   RESPONSIVO / MEDIA QUERIES (FLEXBOX)
+   ========================================== */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .contact-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #FF6F00;
+    /* Color secundario: Naranja */
+}
+
+/* HERO SECTION (FLEXBOX) */
+.hero {
+    background-color: #1565C0;
+    /* Tono de Azul */
+    color: #FFFFFF;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-primary {
+    display: inline-block;
+    background-color: #FF6F00;
+    /* Color secundario: Naranja */
+    color: #FFFFFF;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2E7D32;
+    /* Color complementario: Verde */
+}
+
+/* SOBRE NOSOTROS */
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #F5F5F5;
+}
+
+.about h2 {
+    color: #0F4C81;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* SECCIÓN PRODUCTOS / SERVICIOS (FLEXBOX) */
+.services {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.services h2 {
+    color: #0F4C81;
+    margin-bottom: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite acomodar varias filas */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 2px solid #0F4C81;
+    /* Borde azul corporativo */
+    border-radius: 8px;
+    width: 300px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #0F4C81;
+    margin-bottom: 0.8rem;
+}
+
+.card p {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.btn-card {
+    background-color: #2E7D32;
+    /* Color complementario: Verde */
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-card:hover {
+    background-color: #FF6F00;
+    /* Transición al Naranja corporativo */
+}
+
+/* SECCIÓN CONTACTO (FLEXBOX) */
+.contact {
+    background-color: #0F4C81;
+    color: #FFFFFF;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-info a {
+    color: #FF6F00;
+    /* Naranja secundario */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #FFFFFF;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #0A3254;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ADAPTABILIDAD RESPONSIVA (MEDIA QUERIES) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
